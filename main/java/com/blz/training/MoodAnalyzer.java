@@ -21,12 +21,12 @@ public class MoodAnalyzer {
 		this.message = message;
 	}
 
-	public String analyzeMood(String message) {
+	public String analyzeMood(String message) throws MoodAnalysisException {
 		this.message = message;
 		return analyzeMood();
 	}
 
-	public String analyzeMood() {
+	public String analyzeMood() throws MoodAnalysisException {
 		try {
 			if (message.contains("Sad"))
 				return "Sad";
@@ -44,7 +44,7 @@ public class MoodAnalyzer {
 	 * @return
 	 * @return
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MoodAnalysisException {
 		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
